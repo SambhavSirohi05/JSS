@@ -3,7 +3,7 @@ import { Send, User, Code, Cpu, Briefcase, Mail, FileText, Bot, Loader2 } from '
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
 
-const Home = ({ onRetr0 }) => {
+const Home = ({ onRetr0, onMe }) => {
   const [greeting, setGreeting] = useState('')
   const [chatInput, setChatInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -53,7 +53,7 @@ const Home = ({ onRetr0 }) => {
   }
 
   const categoryButtons = [
-    { icon: User, label: 'Me', color: 'from-pink-400 to-rose-400' },
+    { icon: User, label: 'About', color: 'from-pink-400 to-rose-400', onClick: onMe },
     { icon: Code, label: 'Projects', color: 'from-blue-400 to-cyan-400' },
     { icon: Cpu, label: 'Skills', color: 'from-green-400 to-emerald-400' },
     { icon: Briefcase, label: 'Experience', color: 'from-purple-400 to-violet-400' },
@@ -107,7 +107,7 @@ const Home = ({ onRetr0 }) => {
           
           {/* Main Title */}
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-space-grotesk">
-            AI Portfolio
+            Portfolio
           </h1>
           
           {/* Avatar */}
@@ -232,6 +232,7 @@ const Home = ({ onRetr0 }) => {
             return (
               <button
                 key={index}
+                onClick={button.onClick}
                 className="group flex flex-col items-center gap-2 px-6 py-4 bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-[120px]"
               >
                 <div className={`p-3 rounded-xl bg-gradient-to-br ${button.color} shadow-md group-hover:shadow-lg transition-all duration-300`}>

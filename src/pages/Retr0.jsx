@@ -107,7 +107,7 @@ const Retr0 = ({ onBack }) => {
           
           {/* Main Title */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-space-grotesk">
-            Retr0 Portfolio
+            Portfolio
           </h1>
           
           {/* Avatar */}
