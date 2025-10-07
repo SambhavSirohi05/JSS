@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, User, Code, Cpu, Briefcase, Mail, FileText, ArrowLeft, Bot, Loader2 } from 'lucide-react'
+import { Send, User, Code, Mail, FileText, ArrowLeft, Bot, Loader2 } from 'lucide-react'
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
 
-const Retr0 = ({ onBack }) => {
+const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
   const [greeting, setGreeting] = useState('')
   const [chatInput, setChatInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -53,11 +53,9 @@ const Retr0 = ({ onBack }) => {
   }
 
   const categoryButtons = [
-    { icon: User, label: 'About', color: 'from-purple-500 to-pink-500' },
-    { icon: Code, label: 'Projects', color: 'from-blue-500 to-cyan-500' },
-    { icon: Cpu, label: 'Skills', color: 'from-green-500 to-emerald-500' },
-    { icon: Briefcase, label: 'Experience', color: 'from-orange-500 to-red-500' },
-    { icon: Mail, label: 'Contact', color: 'from-yellow-500 to-orange-500' }
+    { icon: User, label: 'About', color: 'from-purple-500 to-pink-500', onClick: onAbout },
+    { icon: Code, label: 'Projects', color: 'from-blue-500 to-cyan-500', onClick: onProjects },
+    { icon: Mail, label: 'Contact', color: 'from-yellow-500 to-orange-500', onClick: onContact }
   ]
 
   return (
@@ -232,6 +230,7 @@ const Retr0 = ({ onBack }) => {
             return (
               <button
                 key={index}
+                onClick={button.onClick}
                 className="group flex flex-col items-center gap-2 px-6 py-4 bg-black/80 backdrop-blur-md rounded-2xl border border-gray-700 shadow-lg hover:bg-gray-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 min-w-[120px]"
               >
                 <div className={`p-3 rounded-xl bg-gradient-to-br ${button.color} shadow-md group-hover:shadow-lg transition-all duration-300`}>

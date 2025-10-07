@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, User, Code, Cpu, Briefcase, Mail, FileText, Bot, Loader2 } from 'lucide-react'
+import { Send, User, Code, Mail, FileText, Bot, Loader2 } from 'lucide-react'
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
 
-const Home = ({ onRetr0, onMe }) => {
+const Home = ({ onRetr0, onAbout, onProjects, onContact }) => {
   const [greeting, setGreeting] = useState('')
   const [chatInput, setChatInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -53,11 +53,9 @@ const Home = ({ onRetr0, onMe }) => {
   }
 
   const categoryButtons = [
-    { icon: User, label: 'About', color: 'from-pink-400 to-rose-400', onClick: onMe },
-    { icon: Code, label: 'Projects', color: 'from-blue-400 to-cyan-400' },
-    { icon: Cpu, label: 'Skills', color: 'from-green-400 to-emerald-400' },
-    { icon: Briefcase, label: 'Experience', color: 'from-purple-400 to-violet-400' },
-    { icon: Mail, label: 'Contact', color: 'from-orange-400 to-amber-400' }
+    { icon: User, label: 'About', color: 'from-pink-400 to-rose-400', onClick: onAbout },
+    { icon: Code, label: 'Projects', color: 'from-blue-400 to-cyan-400', onClick: onProjects },
+    { icon: Mail, label: 'Contact', color: 'from-orange-400 to-amber-400', onClick: onContact }
   ]
 
   return (
