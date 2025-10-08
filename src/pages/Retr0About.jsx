@@ -117,7 +117,7 @@ const Retr0About = ({ onBack }) => {
               <p className="text-gray-300 mb-2 flex items-center gap-2"><User className="w-4 h-4" /> Sambhav Sirohi</p>
               <p className="text-gray-300 mb-2 flex items-center gap-2"><MapPin className="w-4 h-4" /> Delhi, India</p>
               <p className="text-gray-300 mb-2 flex items-center gap-2"><Calendar className="w-4 h-4" /> B.Tech IT Student</p>
-              <p className="text-gray-300 mb-2 flex items-center gap-2"><Mail className="w-4 h-4" /> sambhavsirohi@gmail.com</p>
+              <p className="text-gray-300 mb-2 flex items-center gap-2"><Mail className="w-4 h-4" /> sambhavsirohi05@gmail.com</p>
               <div className="flex gap-3 mt-4">
                 <a href="https://github.com/SambhavSirohi05" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Github className="w-5 h-5" /></a>
                 <a href="https://www.linkedin.com/in/sambhav-sirohi-49330516b/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Linkedin className="w-5 h-5" /></a>

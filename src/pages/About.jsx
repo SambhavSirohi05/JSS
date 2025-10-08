@@ -150,7 +150,7 @@ const About = ({ onBack }) => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-gray-500" />
-                    <span className="text-gray-700">sambhavsirohi@gmail.com</span>
+                    <span className="text-gray-700">sambhavsirohi05@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Github className="w-4 h-4 text-gray-500" />

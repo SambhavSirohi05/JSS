@@ -41,8 +41,8 @@ const Contact = ({ onBack }) => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'sambhavsirohi@gmail.com',
-      link: 'mailto:sambhavsirohi@gmail.com',
+      value: 'sambhavsirohi05@gmail.com',
+      link: 'mailto:sambhavsirohi05@gmail.com',
       color: 'from-blue-400 to-blue-600'
     },
     {
@@ -305,7 +305,7 @@ const Contact = ({ onBack }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:sambhavsirohi@gmail.com"
+                  href="mailto:sambhavsirohi05@gmail.com"
                   className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
                 >
                   Send Email

@@ -3,7 +3,7 @@ export const resumeData = {
   personalInfo: {
     name: "Sambhav Sirohi",
     location: "Delhi, India",
-    email: "sambhavsirohi@gmail.com",
+    email: "sambhavsirohi05@gmail.com",
     linkedin: "https://www.linkedin.com/in/sambhav-sirohi-49330516b/",
     github: "https://github.com/SambhavSirohi05",
     twitter: "https://x.com/Retr06421",
