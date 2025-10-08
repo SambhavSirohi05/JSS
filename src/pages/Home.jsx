@@ -77,7 +77,7 @@ const Home = ({ onRetr0, onAbout, onProjects, onContact, onAchievements }) => {
       </div>
       
       {/* Floating CV Button */}
-      <div className="fixed top-6 right-6 z-10">
+      <div className="fixed top-6 right-6 z-50">
         <button className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl">
           <FileText className="w-4 h-4 text-gray-700 group-hover:text-gray-900" />
           <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">CV</span>
@@ -85,7 +85,7 @@ const Home = ({ onRetr0, onAbout, onProjects, onContact, onAchievements }) => {
       </div>
 
       {/* Floating Retr0 Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onRetr0}
           className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl"

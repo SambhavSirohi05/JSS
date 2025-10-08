@@ -65,19 +65,19 @@ const Retr0Contact = ({ onBack }) => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/retr0',
+      url: 'https://github.com/SambhavSirohi05',
       color: 'hover:text-white'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/retr0',
+      url: 'https://www.linkedin.com/in/sambhav-sirohi-49330516b/',
       color: 'hover:text-blue-400'
     },
     {
       icon: Twitter,
       name: 'Twitter',
-      url: 'https://twitter.com/retr0',
+      url: 'https://x.com/Retr06421',
       color: 'hover:text-blue-300'
     }
   ]
@@ -124,7 +124,7 @@ const Retr0Contact = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-md rounded-full border border-gray-700 shadow-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl"
@@ -350,7 +350,7 @@ const Retr0Contact = ({ onBack }) => {
                   Send Encrypted Email
                 </a>
                 <a
-                  href="https://github.com/retr0"
+                  href="https://github.com/SambhavSirohi05"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg"

@@ -77,7 +77,7 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact, onAchievements }) => {
       </div>
       
       {/* Floating CV Button */}
-      <div className="fixed top-6 right-6 z-10">
+      <div className="fixed top-6 right-6 z-50">
         <button className="group flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-md rounded-full border border-gray-700 shadow-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl">
           <FileText className="w-4 h-4 text-gray-300 group-hover:text-white" />
           <span className="text-sm font-medium text-gray-300 group-hover:text-white">CV</span>
@@ -85,7 +85,7 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact, onAchievements }) => {
       </div>
 
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-md rounded-full border border-gray-700 shadow-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl"

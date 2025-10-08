@@ -6,67 +6,57 @@ const Retr0Achievements = ({ onBack }) => {
   const achievements = [
     {
       id: 1,
-      title: "Elite Hacker - CTF Champion",
-      organization: "CyberDefense Challenge 2024",
-      date: "March 2024",
-      description: "Secured first place in a 48-hour Capture The Flag competition, solving 15/20 challenges including advanced cryptography and reverse engineering.",
-      category: "Cybersecurity",
+      title: "AI Portfolio Project",
+      organization: "Personal Development",
+      date: "2024",
+      description: "Successfully built and deployed AI-powered interactive portfolio with autonomous client interaction using Groq API and real-time processing.",
+      category: "Project",
       icon: Shield,
       color: "from-red-500 to-orange-500"
     },
     {
       id: 2,
-      title: "Zero-Day Discovery",
-      organization: "Bug Bounty Program",
-      date: "January 2024",
-      description: "Discovered and responsibly disclosed a critical zero-day vulnerability in a major web application, earning recognition from the security community.",
-      category: "Research",
+      title: "AuthentiFi Platform",
+      organization: "Blockchain Innovation",
+      date: "2024",
+      description: "Developed blockchain-based credential verification platform using soulbound NFTs to prevent credential fraud and enable instant verification.",
+      category: "Project",
       icon: Zap,
       color: "from-yellow-500 to-orange-500"
     },
     {
       id: 3,
-      title: "Penetration Testing Expert",
-      organization: "Offensive Security",
-      date: "November 2023",
-      description: "Achieved OSCP certification with perfect score, demonstrating advanced penetration testing and ethical hacking skills.",
-      category: "Certification",
+      title: "Chainlings Arena",
+      organization: "Gaming Development",
+      date: "2024",
+      description: "Created real-time multiplayer crypto trading game with live price feeds, automated scoring, and competitive leaderboards.",
+      category: "Project",
       icon: Award,
       color: "from-purple-500 to-pink-500"
     },
     {
       id: 4,
-      title: "Security Researcher of the Year",
-      organization: "InfoSec Institute",
-      date: "September 2023",
-      description: "Published 12 security research papers and contributed to multiple open-source security tools with 1000+ GitHub stars.",
-      category: "Research",
+      title: "Technical Society Member",
+      organization: "Quanta - Electronics and Communication Society",
+      date: "2023 - Present",
+      description: "Active member and mentor in technical society, organizing events and conducting workshops on Arduino Programming and electronics.",
+      category: "Leadership",
       icon: Star,
       color: "from-cyan-500 to-blue-500"
     },
     {
       id: 5,
-      title: "Red Team Lead",
-      organization: "Corporate Security Division",
-      date: "Ongoing",
-      description: "Leading red team operations for Fortune 500 companies, successfully identifying and mitigating critical security vulnerabilities.",
-      category: "Professional",
+      title: "Full-Stack Developer",
+      organization: "Self-Taught",
+      date: "2023 - Present",
+      description: "Mastered full-stack development with expertise in React.js, Node.js, MongoDB, and modern web technologies.",
+      category: "Skills",
       icon: Target,
       color: "from-green-500 to-emerald-500"
-    },
-    {
-      id: 6,
-      title: "Malware Analysis Master",
-      organization: "SANS Institute",
-      date: "July 2023",
-      description: "Completed advanced malware analysis course with distinction, specializing in APT detection and reverse engineering.",
-      category: "Training",
-      icon: Trophy,
-      color: "from-indigo-500 to-purple-500"
     }
   ]
 
-  const categories = ["All", "Cybersecurity", "Research", "Certification", "Professional", "Training"]
+  const categories = ["All", "Project", "Leadership", "Skills", "Innovation", "Development"]
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-black">
@@ -86,7 +76,7 @@ const Retr0Achievements = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-all duration-300 shadow-lg border border-white/20"

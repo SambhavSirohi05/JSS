@@ -11,7 +11,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '🛡️',
       technologies: ['React', 'Node.js', 'MongoDB', 'TensorFlow', 'WebSocket'],
       status: 'Live',
-      github: 'https://github.com/retr0/cyberguard-ai',
+      github: 'https://github.com/SambhavSirohi05',
       demo: 'https://cyberguard-demo.com',
       featured: true,
       year: '2024'
@@ -22,7 +22,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '🔐',
       technologies: ['Vue.js', 'TypeScript', 'Quantum.js', 'Rust', 'WebAssembly'],
       status: 'Live',
-      github: 'https://github.com/retr0/quantumvault',
+      github: 'https://github.com/SambhavSirohi05',
       demo: 'https://quantumvault-demo.com',
       featured: true,
       year: '2024'
@@ -33,7 +33,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '🧠',
       technologies: ['React', 'Python', 'D3.js', 'FastAPI', 'Redis'],
       status: 'Live',
-      github: 'https://github.com/retr0/neuralnet-dashboard',
+      github: 'https://github.com/SambhavSirohi05',
       demo: 'https://neuralnet-demo.com',
       featured: false,
       year: '2023'
@@ -44,7 +44,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '🌐',
       technologies: ['Python', 'Scrapy', 'PostgreSQL', 'Docker', 'Celery'],
       status: 'In Development',
-      github: 'https://github.com/retr0/darkweb-scanner',
+      github: 'https://github.com/SambhavSirohi05',
       demo: null,
       featured: false,
       year: '2024'
@@ -55,7 +55,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '💼',
       technologies: ['React', 'TailwindCSS', 'Three.js', 'Groq API', 'WebGL'],
       status: 'Live',
-      github: 'https://github.com/retr0/portfolio',
+      github: 'https://github.com/SambhavSirohi05',
       demo: 'https://retr0.dev',
       featured: true,
       year: '2024'
@@ -66,7 +66,7 @@ const Retr0Projects = ({ onBack }) => {
       image: '₿',
       technologies: ['React Native', 'Rust', 'Web3.js', 'Hardware Security'],
       status: 'Live',
-      github: 'https://github.com/retr0/cryptovault',
+      github: 'https://github.com/SambhavSirohi05',
       demo: 'https://cryptovault-demo.com',
       featured: false,
       year: '2023'
@@ -93,7 +93,7 @@ const Retr0Projects = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-md rounded-full border border-gray-700 shadow-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl"

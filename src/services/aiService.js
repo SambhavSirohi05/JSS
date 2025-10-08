@@ -11,9 +11,11 @@ PERSONAL INFORMATION:
 - Location: ${resumeData.personalInfo.location}
 - Current Role: ${resumeData.personalInfo.currentRole}
 - University: ${resumeData.personalInfo.university}
-- Email: ${resumeData.personalInfo.email}
-- LinkedIn: ${resumeData.personalInfo.linkedin}
-- Portfolio: ${resumeData.personalInfo.portfolio}
+    - Email: ${resumeData.personalInfo.email}
+    - LinkedIn: ${resumeData.personalInfo.linkedin}
+    - GitHub: ${resumeData.personalInfo.github}
+    - Twitter: ${resumeData.personalInfo.twitter}
+    - Portfolio: ${resumeData.personalInfo.portfolio}
 
 EDUCATION:
 ${resumeData.education.map(edu => `- ${edu.degree} from ${edu.institution} (${edu.location}) - ${edu.period} - ${edu.status}`).join('\n')}

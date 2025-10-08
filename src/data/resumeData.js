@@ -5,6 +5,8 @@ export const resumeData = {
     location: "Delhi, India",
     email: "sambhavsirohi@gmail.com",
     linkedin: "https://www.linkedin.com/in/sambhav-sirohi-49330516b/",
+    github: "https://github.com/SambhavSirohi05",
+    twitter: "https://x.com/Retr06421",
     portfolio: "https://sambhavsirohi.vercel.app",
     currentRole: "B.Tech IT Student",
     university: "J.S.S. Academy of Technical Education, Noida"

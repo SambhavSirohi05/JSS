@@ -6,86 +6,79 @@ const About = ({ onBack }) => {
 
   // Skills data
   const skills = [
-    { name: 'React', level: 90, color: 'from-blue-400 to-blue-600' },
+    { name: 'React.js', level: 95, color: 'from-blue-400 to-blue-600' },
     { name: 'JavaScript', level: 95, color: 'from-yellow-400 to-yellow-600' },
-    { name: 'Node.js', level: 85, color: 'from-green-400 to-green-600' },
-    { name: 'Python', level: 80, color: 'from-purple-400 to-purple-600' },
-    { name: 'Machine Learning', level: 75, color: 'from-pink-400 to-pink-600' },
-    { name: 'Web Development', level: 90, color: 'from-indigo-400 to-indigo-600' }
+    { name: 'Node.js', level: 90, color: 'from-green-400 to-green-600' },
+    { name: 'Solidity', level: 85, color: 'from-purple-400 to-purple-600' },
+    { name: 'AI/ML Integration', level: 90, color: 'from-pink-400 to-pink-600' },
+    { name: 'MongoDB', level: 85, color: 'from-indigo-400 to-indigo-600' }
   ]
 
   // Experience data
   const experience = [
     {
-      title: 'Software Engineer',
-      company: 'TechCorp',
-      period: '2022 - Present',
-      description: 'Leading development of scalable web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-      type: 'Full-time'
-    },
-    {
-      title: 'AI Research Intern',
-      company: 'InnovateLabs',
-      period: '2021 - 2022',
-      description: 'Conducted research on machine learning algorithms and developed AI-powered applications. Published 2 research papers in top-tier conferences.',
-      type: 'Internship'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
-      period: '2020 - 2021',
-      description: 'Built responsive web applications and improved user experience. Worked with modern frameworks and libraries to create engaging interfaces.',
-      type: 'Contract'
+      title: 'Member & Mentor',
+      company: 'Quanta - Electronics and Communication Society',
+      period: '2023 - Present',
+      description: 'Planning and organizing society activities and technical events for student engagement. Mentoring in Embedded and Robotics workshops, conducting sessions on Arduino Programming, sensor interfacing, and basic electronics.',
+      type: 'Society Member'
     }
   ]
 
   // Education data
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of Technology',
-      period: '2018 - 2022',
-      gpa: '3.8/4.0',
-      description: 'Specialized in Artificial Intelligence and Software Engineering. Completed capstone project on machine learning applications.'
+      degree: 'B. Tech IT',
+      school: 'J.S.S. Academy of Technical Education',
+      period: 'Oct 2023 - Present',
+      gpa: 'Pursuing',
+      description: 'Currently pursuing Bachelor of Technology in Information Technology. Focused on modern web technologies, AI integration, and blockchain development.'
     },
     {
-      degree: 'High School Diploma',
-      school: 'Tech High School',
-      period: '2014 - 2018',
-      gpa: '3.9/4.0',
-      description: 'Graduated with honors. Active in robotics club and programming competitions.'
+      degree: 'Class 12th - CBSE Board',
+      school: 'Seth Anandram Jaipuria School',
+      period: 'Mar 2023',
+      gpa: 'Completed',
+      description: 'Completed higher secondary education with focus on science and mathematics.'
+    },
+    {
+      degree: 'Class 10th - CBSE Board',
+      school: 'Seth Anandram Jaipuria School',
+      period: 'Mar 2021',
+      gpa: 'Completed',
+      description: 'Completed secondary education with strong foundation in core subjects.'
     }
   ]
 
   // Interests data
   const interests = [
-    { name: 'Photography', icon: '📸', description: 'Capturing moments and exploring creative perspectives' },
-    { name: 'Gaming', icon: '🎮', description: 'Strategy games and indie development' },
-    { name: 'Music', icon: '🎵', description: 'Playing guitar and discovering new artists' },
-    { name: 'Travel', icon: '✈️', description: 'Exploring new cultures and cuisines' },
-    { name: 'Reading', icon: '📚', description: 'Tech blogs, sci-fi novels, and self-improvement' },
-    { name: 'Fitness', icon: '💪', description: 'Running, hiking, and staying active' }
+    { name: 'AI/ML Integration', icon: '🤖', description: 'Large Language Models and AI-powered applications' },
+    { name: 'Blockchain', icon: '⛓️', description: 'Web3 development and smart contract programming' },
+    { name: 'Full-stack Development', icon: '💻', description: 'Building complete web applications' },
+    { name: 'Real-time Applications', icon: '⚡', description: 'Live data processing and interactive systems' },
+    { name: 'Technical Mentoring', icon: '👨‍🏫', description: 'Teaching and guiding fellow students' },
+    { name: 'Open Source', icon: '🔧', description: 'Contributing to developer tools and libraries' }
   ]
 
   // Achievements data
   const achievements = [
     {
-      title: 'Hackathon Winner',
-      organization: 'TechFest 2023',
-      year: '2023',
-      description: 'First place in AI/ML category for innovative chatbot solution'
+      title: 'AI Portfolio Project',
+      organization: 'Personal Project',
+      year: '2024',
+      description: 'Successfully built and deployed AI-powered interactive portfolio with autonomous client interaction'
     },
     {
-      title: 'Open Source Contributor',
-      organization: 'React Community',
-      year: '2022',
-      description: 'Contributed to major React libraries with 500+ GitHub stars'
+      title: 'AuthentiFi Platform',
+      organization: 'Blockchain Project',
+      year: '2024',
+      description: 'Developed blockchain-based credential verification platform using soulbound NFTs'
     },
     {
-      title: 'Certified Developer',
-      organization: 'AWS',
-      year: '2021',
-      description: 'AWS Solutions Architect Associate certification'
+      title: 'Chainlings Arena',
+      organization: 'Gaming Project',
+      year: '2024',
+      description: 'Created real-time multiplayer crypto trading game with live price feeds'
     }
   ]
 
@@ -107,7 +100,7 @@ const About = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl"
@@ -149,19 +142,27 @@ const About = ({ onBack }) => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <MapPin className="w-4 h-4 text-gray-500" />
-                    <span className="text-gray-700">📍 San Francisco, CA</span>
+                    <span className="text-gray-700">📍 Delhi, India</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-4 h-4 text-gray-500" />
-                    <span className="text-gray-700">🎂 25 years old</span>
+                    <span className="text-gray-700">🎓 B.Tech IT Student</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="w-4 h-4 text-gray-500" />
-                    <span className="text-gray-700">sambhav@example.com</span>
+                    <span className="text-gray-700">sambhavsirohi@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Github className="w-4 h-4 text-gray-500" />
-                    <span className="text-gray-700">github.com/sambhavsirohi</span>
+                    <span className="text-gray-700">github.com/SambhavSirohi05</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="w-4 h-4 text-gray-500" />
+                    <span className="text-gray-700">linkedin.com/in/sambhav-sirohi-49330516b</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Twitter className="w-4 h-4 text-gray-500" />
+                    <span className="text-gray-700">x.com/Retr06421</span>
                   </div>
                 </div>
               </div>
@@ -218,14 +219,14 @@ const About = ({ onBack }) => {
                   About
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  I'm a passionate software engineer with a love for creating innovative solutions and 
-                  solving complex problems. With expertise in modern web technologies and a keen interest 
-                  in artificial intelligence, I enjoy building applications that make a real difference.
+                  I'm a passionate B.Tech IT student with a love for creating innovative solutions and 
+                  solving complex problems. With expertise in modern web technologies, AI integration, 
+                  and blockchain development, I enjoy building applications that make a real difference.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                  projects, or pursuing my hobbies. I believe in continuous learning and staying up-to-date 
-                  with the latest trends in technology.
+                  When I'm not coding, you'll find me mentoring fellow students in technical workshops, 
+                  exploring new technologies, or working on exciting projects. I believe in continuous 
+                  learning and staying up-to-date with the latest trends in technology.
                 </p>
               </div>
 

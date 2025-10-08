@@ -41,22 +41,22 @@ const Contact = ({ onBack }) => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'sambhav@example.com',
-      link: 'mailto:sambhav@example.com',
+      value: 'sambhavsirohi@gmail.com',
+      link: 'mailto:sambhavsirohi@gmail.com',
       color: 'from-blue-400 to-blue-600'
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-      color: 'from-green-400 to-green-600'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Delhi, India',
       link: '#',
+      color: 'from-green-400 to-green-600'
+    },
+    {
+      icon: Github,
+      title: 'GitHub',
+      value: 'github.com/SambhavSirohi05',
+      link: 'https://github.com/SambhavSirohi05',
       color: 'from-purple-400 to-purple-600'
     }
   ]
@@ -65,27 +65,27 @@ const Contact = ({ onBack }) => {
     {
       icon: Github,
       name: 'GitHub',
-      url: 'https://github.com/sambhavsirohi',
+      url: 'https://github.com/SambhavSirohi05',
       color: 'hover:text-gray-900'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/sambhavsirohi',
+      url: 'https://www.linkedin.com/in/sambhav-sirohi-49330516b/',
       color: 'hover:text-blue-600'
     },
     {
       icon: Twitter,
       name: 'Twitter',
-      url: 'https://twitter.com/sambhavsirohi',
+      url: 'https://x.com/Retr06421',
       color: 'hover:text-blue-400'
     }
   ]
 
   const availability = [
-    { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM PST' },
-    { day: 'Saturday', time: '10:00 AM - 2:00 PM PST' },
-    { day: 'Sunday', time: 'Closed' }
+    { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM IST' },
+    { day: 'Saturday', time: '10:00 AM - 2:00 PM IST' },
+    { day: 'Sunday', time: 'Available for urgent queries' }
   ]
 
   return (
@@ -106,7 +106,7 @@ const Contact = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl"
@@ -305,7 +305,7 @@ const Contact = ({ onBack }) => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:sambhav@example.com"
+                  href="mailto:sambhavsirohi@gmail.com"
                   className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
                 >
                   Send Email

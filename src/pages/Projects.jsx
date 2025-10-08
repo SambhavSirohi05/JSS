@@ -6,74 +6,41 @@ const Projects = ({ onBack }) => {
   // Projects data
   const projects = [
     {
-      title: 'AI Chatbot Platform',
-      description: 'A full-stack web application that provides intelligent conversational AI capabilities with real-time messaging, user authentication, and analytics dashboard.',
+      title: 'AI Portfolio',
+      description: 'Interactive AI-powered personal portfolio that uses AI to autonomously answer user and client queries about skills, projects, and experience.',
       image: '🤖',
-      technologies: ['React', 'Node.js', 'MongoDB', 'OpenAI API', 'Socket.io'],
+      technologies: ['JavaScript', 'React.js', 'TailwindCSS', 'Groq API', 'GitHub Actions', 'Vercel'],
       status: 'Live',
-      github: 'https://github.com/sambhavsirohi/ai-chatbot',
-      demo: 'https://ai-chatbot-demo.com',
+      github: 'https://github.com/SambhavSirohi05',
+      demo: 'https://sambhavsirohi.vercel.app',
       featured: true,
       year: '2024'
     },
     {
-      title: 'E-commerce Dashboard',
-      description: 'A comprehensive admin dashboard for managing online stores with real-time analytics, inventory management, and order processing capabilities.',
-      image: '🛒',
-      technologies: ['React', 'TypeScript', 'Redux', 'Chart.js', 'Express'],
+      title: 'AuthentiFi',
+      description: 'Blockchain-based credential verification platform where universities can issue verified certificates as soulbound NFTs, ensuring authenticity and preventing forgery.',
+      image: '⛓️',
+      technologies: ['JavaScript', 'React.js', 'Solidity', 'Ether.js', 'TailwindCSS'],
       status: 'Live',
-      github: 'https://github.com/sambhavsirohi/ecommerce-dashboard',
-      demo: 'https://ecommerce-demo.com',
-      featured: true,
-      year: '2023'
-    },
-    {
-      title: 'Weather App',
-      description: 'A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: '🌤️',
-      technologies: ['React', 'JavaScript', 'Weather API', 'CSS3'],
-      status: 'Live',
-      github: 'https://github.com/sambhavsirohi/weather-app',
-      demo: 'https://weather-demo.com',
-      featured: false,
-      year: '2023'
-    },
-    {
-      title: 'Task Management Tool',
-      description: 'A collaborative task management application with team features, project tracking, and deadline management.',
-      image: '📋',
-      technologies: ['Vue.js', 'Node.js', 'PostgreSQL', 'JWT'],
-      status: 'In Development',
-      github: 'https://github.com/sambhavsirohi/task-manager',
-      demo: null,
-      featured: false,
-      year: '2024'
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website with interactive animations and AI integration.',
-      image: '💼',
-      technologies: ['React', 'TailwindCSS', 'Three.js', 'Groq API'],
-      status: 'Live',
-      github: 'https://github.com/sambhavsirohi/portfolio',
-      demo: 'https://sambhavsirohi.com',
+      github: 'https://github.com/SambhavSirohi05',
+      demo: 'https://authentifi.vercel.app',
       featured: true,
       year: '2024'
     },
     {
-      title: 'Data Visualization Tool',
-      description: 'An interactive data visualization platform for creating charts, graphs, and dashboards from CSV data.',
-      image: '📊',
-      technologies: ['D3.js', 'React', 'Python', 'Pandas'],
+      title: 'Chainlings Arena',
+      description: 'Multiplayer crypto trading game featuring live crypto price tracking, automated scoring, and dynamic leaderboards with tiered reward distribution.',
+      image: '🎮',
+      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'TailwindCSS', 'Framer Motion', 'CoinGecko API', 'Vercel'],
       status: 'Live',
-      github: 'https://github.com/sambhavsirohi/data-viz',
-      demo: 'https://dataviz-demo.com',
-      featured: false,
-      year: '2023'
+      github: 'https://github.com/SambhavSirohi05',
+      demo: 'https://chainlings-arena.vercel.app',
+      featured: true,
+      year: '2024'
     }
   ]
 
-  const categories = ['All', 'Web Apps', 'Mobile Apps', 'AI/ML', 'Data Viz', 'Tools']
+  const categories = ['All', 'AI/ML', 'Blockchain', 'Web Apps', 'Gaming', 'Full-stack']
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
@@ -93,7 +60,7 @@ const Projects = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl"

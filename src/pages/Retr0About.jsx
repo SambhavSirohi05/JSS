@@ -5,62 +5,63 @@ import Prism from '../components/Prism'
 const Retr0About = ({ onBack }) => {
   // Skills data
   const skills = [
-    { name: 'React', level: 90, color: 'from-blue-400 to-blue-600' },
+    { name: 'React.js', level: 95, color: 'from-blue-400 to-blue-600' },
     { name: 'JavaScript', level: 95, color: 'from-yellow-400 to-yellow-600' },
-    { name: 'Node.js', level: 85, color: 'from-green-400 to-green-600' },
-    { name: 'Python', level: 80, color: 'from-purple-400 to-purple-600' },
-    { name: 'Machine Learning', level: 75, color: 'from-pink-400 to-pink-600' },
-    { name: 'Web Development', level: 90, color: 'from-indigo-400 to-indigo-600' }
+    { name: 'Node.js', level: 90, color: 'from-green-400 to-green-600' },
+    { name: 'Solidity', level: 85, color: 'from-purple-400 to-purple-600' },
+    { name: 'AI/ML Integration', level: 90, color: 'from-pink-400 to-pink-600' },
+    { name: 'MongoDB', level: 85, color: 'from-indigo-400 to-indigo-600' }
   ]
 
   // Experience data
   const experience = [
     {
-      title: 'Senior Software Engineer',
-      company: 'CyberTech Solutions',
-      period: 'Jan 2022 - Present',
-      description: 'Leading development of cutting-edge cybersecurity applications and mentoring junior developers. Specialized in building secure, scalable systems.'
-    },
-    {
-      title: 'AI Research Intern',
-      company: 'QuantumLabs',
-      period: 'Summer 2021',
-      description: 'Conducted advanced research on quantum machine learning and neural network optimization. Contributed to breakthrough algorithms in AI security.'
+      title: 'Member & Mentor',
+      company: 'Quanta - Electronics and Communication Society',
+      period: '2023 - Present',
+      description: 'Planning and organizing society activities and technical events for student engagement. Mentoring in Embedded and Robotics workshops, conducting sessions on Arduino Programming, sensor interfacing, and basic electronics.'
     }
   ]
 
   // Education data
   const education = [
     {
-      degree: 'B.Sc. Computer Science',
-      institution: 'Tech University',
-      period: '2018 - 2022',
-      details: 'Graduated with honors. Focused on AI, Cybersecurity, and Advanced Web Development.'
+      degree: 'B. Tech IT',
+      institution: 'J.S.S. Academy of Technical Education',
+      period: 'Oct 2023 - Present',
+      details: 'Currently pursuing Bachelor of Technology in Information Technology. Focused on modern web technologies, AI integration, and blockchain development.'
     },
     {
-      degree: 'High School Diploma',
-      institution: 'Digital High School',
-      period: '2014 - 2018',
-      details: 'Achieved top grades in Mathematics and Computer Science.'
+      degree: 'Class 12th - CBSE Board',
+      institution: 'Seth Anandram Jaipuria School',
+      period: 'Mar 2023',
+      details: 'Completed higher secondary education with focus on science and mathematics.'
+    },
+    {
+      degree: 'Class 10th - CBSE Board',
+      institution: 'Seth Anandram Jaipuria School',
+      period: 'Mar 2021',
+      details: 'Completed secondary education with strong foundation in core subjects.'
     }
   ]
 
   // Interests data
   const interests = [
-    { icon: Award, label: 'Cybersecurity' },
-    { icon: BookOpen, label: 'Quantum Computing' },
-    { icon: Heart, label: 'Gaming' },
-    { icon: Code, label: 'Open Source' },
-    { icon: Mail, label: 'Travel' },
-    { icon: Cpu, label: 'AI Ethics' }
+    { icon: Award, label: 'AI/ML Integration' },
+    { icon: BookOpen, label: 'Blockchain' },
+    { icon: Heart, label: 'Full-stack Development' },
+    { icon: Code, label: 'Real-time Applications' },
+    { icon: Mail, label: 'Technical Mentoring' },
+    { icon: Cpu, label: 'Open Source' }
   ]
 
   // Achievements data
   const achievements = [
-    'Won 1st place in National Cyber Security Hackathon 2023',
-    'Published research paper on Quantum AI in Journal of Future Tech',
-    'AWS Certified Security Specialist',
-    'Contributed to 10+ open-source security projects'
+    'Successfully built and deployed 3 major full-stack projects',
+    'Integrated AI capabilities into portfolio for autonomous client interaction',
+    'Developed blockchain-based solution for credential verification',
+    'Created real-time multiplayer gaming platform with crypto integration',
+    'Active member of technical society with mentoring responsibilities'
   ]
 
   return (
@@ -81,7 +82,7 @@ const Retr0About = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="group flex items-center gap-2 px-4 py-2 bg-black/80 backdrop-blur-md rounded-full border border-gray-700 shadow-lg hover:bg-gray-900 transition-all duration-300 hover:shadow-xl"
@@ -113,14 +114,14 @@ const Retr0About = ({ onBack }) => {
             {/* Personal Information */}
             <div className="bg-black/90 backdrop-blur-md rounded-2xl border border-gray-700 shadow-lg p-6">
               <h2 className="text-2xl font-bold text-white mb-4">Personal Information</h2>
-              <p className="text-gray-300 mb-2 flex items-center gap-2"><User className="w-4 h-4" /> Retr0</p>
-              <p className="text-gray-300 mb-2 flex items-center gap-2"><MapPin className="w-4 h-4" /> Digital Space</p>
-              <p className="text-gray-300 mb-2 flex items-center gap-2"><Calendar className="w-4 h-4" /> 22 Years Old</p>
-              <p className="text-gray-300 mb-2 flex items-center gap-2"><Mail className="w-4 h-4" /> retr0@example.com</p>
+              <p className="text-gray-300 mb-2 flex items-center gap-2"><User className="w-4 h-4" /> Sambhav Sirohi</p>
+              <p className="text-gray-300 mb-2 flex items-center gap-2"><MapPin className="w-4 h-4" /> Delhi, India</p>
+              <p className="text-gray-300 mb-2 flex items-center gap-2"><Calendar className="w-4 h-4" /> B.Tech IT Student</p>
+              <p className="text-gray-300 mb-2 flex items-center gap-2"><Mail className="w-4 h-4" /> sambhavsirohi@gmail.com</p>
               <div className="flex gap-3 mt-4">
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Github className="w-5 h-5" /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Linkedin className="w-5 h-5" /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Twitter className="w-5 h-5" /></a>
+                <a href="https://github.com/SambhavSirohi05" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Github className="w-5 h-5" /></a>
+                <a href="https://www.linkedin.com/in/sambhav-sirohi-49330516b/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+                <a href="https://x.com/Retr06421" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
 
@@ -128,7 +129,7 @@ const Retr0About = ({ onBack }) => {
             <div className="bg-black/90 backdrop-blur-md rounded-2xl border border-gray-700 shadow-lg p-6">
               <h2 className="text-2xl font-bold text-white mb-4">About Retr0</h2>
               <p className="text-gray-300 leading-relaxed">
-                Hello! I'm Retr0, a passionate developer with a deep interest in cybersecurity and cutting-edge technologies. I love building innovative solutions and constantly exploring new frontiers in tech. My journey in the digital realm has been driven by curiosity and a desire to create secure, impactful applications. I specialize in crafting robust, efficient, and user-friendly experiences in the cyber world.
+                Hello! I'm Retr0, an AI assistant representing Sambhav Sirohi, a passionate B.Tech IT student with expertise in AI integration, blockchain development, and full-stack web technologies. I help showcase Sambhav's innovative projects and technical skills. My knowledge spans across modern web development, AI/ML integration, and cutting-edge technologies that Sambhav works with.
               </p>
             </div>
 

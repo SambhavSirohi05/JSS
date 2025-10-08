@@ -6,57 +6,57 @@ const Achievements = ({ onBack }) => {
   const achievements = [
     {
       id: 1,
-      title: "First Place - Hackathon 2024",
-      organization: "Tech Innovation Summit",
-      date: "March 2024",
-      description: "Led a team of 4 developers to create an AI-powered productivity app that won first place among 50+ competing teams.",
-      category: "Competition",
+      title: "AI Portfolio Project",
+      organization: "Personal Development",
+      date: "2024",
+      description: "Successfully built and deployed AI-powered interactive portfolio with autonomous client interaction using Groq API and real-time processing.",
+      category: "Project",
       icon: Trophy,
       color: "from-yellow-400 to-orange-400"
     },
     {
       id: 2,
-      title: "Outstanding Student Award",
-      organization: "Computer Science Department",
-      date: "December 2023",
-      description: "Recognized for exceptional academic performance and contributions to the computer science community.",
-      category: "Academic",
+      title: "AuthentiFi Platform",
+      organization: "Blockchain Innovation",
+      date: "2024",
+      description: "Developed blockchain-based credential verification platform using soulbound NFTs to prevent credential fraud and enable instant verification.",
+      category: "Project",
       icon: Award,
       color: "from-blue-400 to-cyan-400"
     },
     {
       id: 3,
-      title: "Open Source Contributor",
-      organization: "React Community",
-      date: "Ongoing",
-      description: "Contributed to major open source projects with 500+ commits and helped maintain popular React libraries.",
-      category: "Open Source",
+      title: "Chainlings Arena",
+      organization: "Gaming Development",
+      date: "2024",
+      description: "Created real-time multiplayer crypto trading game with live price feeds, automated scoring, and competitive leaderboards.",
+      category: "Project",
       icon: Star,
       color: "from-green-400 to-emerald-400"
     },
     {
       id: 4,
-      title: "Certified AWS Solutions Architect",
-      organization: "Amazon Web Services",
-      date: "August 2023",
-      description: "Successfully passed the AWS Solutions Architect Associate exam with a score of 95%.",
-      category: "Certification",
+      title: "Technical Society Member",
+      organization: "Quanta - Electronics and Communication Society",
+      date: "2023 - Present",
+      description: "Active member and mentor in technical society, organizing events and conducting workshops on Arduino Programming and electronics.",
+      category: "Leadership",
       icon: Target,
       color: "from-purple-400 to-pink-400"
     },
     {
       id: 5,
-      title: "Best Project Award",
-      organization: "University Capstone",
-      date: "May 2023",
-      description: "Developed a machine learning model for predicting student success with 92% accuracy.",
-      category: "Project",
+      title: "Full-Stack Developer",
+      organization: "Self-Taught",
+      date: "2023 - Present",
+      description: "Mastered full-stack development with expertise in React.js, Node.js, MongoDB, and modern web technologies.",
+      category: "Skills",
       icon: Calendar,
       color: "from-red-400 to-rose-400"
     }
   ]
 
-  const categories = ["All", "Competition", "Academic", "Open Source", "Certification", "Project"]
+  const categories = ["All", "Project", "Leadership", "Skills", "Innovation", "Development"]
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
@@ -76,7 +76,7 @@ const Achievements = ({ onBack }) => {
       </div>
       
       {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-10">
+      <div className="fixed top-6 left-6 z-50">
         <button 
           onClick={onBack}
           className="flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-gray-700 hover:bg-white/30 transition-all duration-300 shadow-lg border border-white/20"
