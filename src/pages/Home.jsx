@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, User, Code, Mail, FileText, Bot, Loader2 } from 'lucide-react'
+import { Send, User, Code, Mail, FileText, Bot, Loader2, Trophy } from 'lucide-react'
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
 
-const Home = ({ onRetr0, onAbout, onProjects, onContact }) => {
+const Home = ({ onRetr0, onAbout, onProjects, onContact, onAchievements }) => {
   const [greeting, setGreeting] = useState('')
   const [chatInput, setChatInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -55,6 +55,7 @@ const Home = ({ onRetr0, onAbout, onProjects, onContact }) => {
   const categoryButtons = [
     { icon: User, label: 'About', color: 'from-pink-400 to-rose-400', onClick: onAbout },
     { icon: Code, label: 'Projects', color: 'from-blue-400 to-cyan-400', onClick: onProjects },
+    { icon: Trophy, label: 'Achievements', color: 'from-yellow-400 to-orange-400', onClick: onAchievements },
     { icon: Mail, label: 'Contact', color: 'from-orange-400 to-amber-400', onClick: onContact }
   ]
 
@@ -96,27 +97,27 @@ const Home = ({ onRetr0, onAbout, onProjects, onContact }) => {
 
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12 pointer-events-none">
-        {/* Hero Section */}
-        <div className="text-center mb-8">
-          {/* Time-based Greeting */}
-          <p className="text-lg text-gray-700 mb-3 font-light">
-            {greeting}, I'm <span className="font-medium text-gray-900">Sambhav Sirohi</span>
-          </p>
-          
-          {/* Main Title */}
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-space-grotesk">
-            Portfolio
-          </h1>
-          
-          {/* Avatar */}
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 shadow-2xl flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
-                <User className="w-12 h-12 text-gray-700" />
-              </div>
-            </div>
-          </div>
-        </div>
+                {/* Hero Section */}
+                <div className="text-center mb-8">
+                  {/* Time-based Greeting */}
+                  <p className="text-lg text-gray-700 mb-3 font-light">
+                    {greeting}, I'm <span className="font-medium text-gray-900">Sambhav Sirohi</span>
+                  </p>
+                  
+                  {/* Main Title */}
+                  <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-space-grotesk">
+                    Portfolio
+                  </h1>
+                  
+                  {/* Avatar */}
+                  <div className="flex justify-center mb-8">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 shadow-2xl flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                        <User className="w-12 h-12 text-gray-700" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
         {/* AI Chat Container */}
         <div className="w-full max-w-2xl mb-8 pointer-events-auto">

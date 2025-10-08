@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Send, User, Code, Mail, FileText, ArrowLeft, Bot, Loader2 } from 'lucide-react'
+import { Send, User, Code, Mail, FileText, ArrowLeft, Bot, Loader2, Trophy } from 'lucide-react'
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
 
-const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
+const Retr0 = ({ onBack, onAbout, onProjects, onContact, onAchievements }) => {
   const [greeting, setGreeting] = useState('')
   const [chatInput, setChatInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -55,6 +55,7 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
   const categoryButtons = [
     { icon: User, label: 'About', color: 'from-purple-500 to-pink-500', onClick: onAbout },
     { icon: Code, label: 'Projects', color: 'from-blue-500 to-cyan-500', onClick: onProjects },
+    { icon: Trophy, label: 'Achievements', color: 'from-yellow-500 to-orange-500', onClick: onAchievements },
     { icon: Mail, label: 'Contact', color: 'from-yellow-500 to-orange-500', onClick: onContact }
   ]
 
@@ -67,11 +68,11 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
           timeScale={0.3}
           height={3.8}
           baseWidth={6.0}
-          scale={4.0}
-          hueShift={0}
-          colorFrequency={1}
-          noise={0}
-          glow={1}
+          scale={3.5}
+          hueShift={0.2}
+          colorFrequency={1.5}
+          noise={0.05}
+          glow={1.8}
         />
       </div>
       
@@ -96,27 +97,27 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
 
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-12 pointer-events-none">
-        {/* Hero Section */}
-        <div className="text-center mb-8">
-          {/* Time-based Greeting */}
-          <p className="text-lg text-gray-300 mb-3 font-light">
-            {greeting}, I'm <span className="font-medium text-white">Retr0</span>
-          </p>
-          
-          {/* Main Title */}
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-space-grotesk">
-            Portfolio
-          </h1>
-          
-          {/* Avatar */}
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 shadow-2xl flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-black/80 backdrop-blur-sm flex items-center justify-center">
-                <Code className="w-12 h-12 text-purple-400" />
-              </div>
-            </div>
-          </div>
-        </div>
+                {/* Hero Section */}
+                <div className="text-center mb-8">
+                  {/* Time-based Greeting */}
+                  <p className="text-lg text-gray-300 mb-3 font-light">
+                    {greeting}, I'm <span className="font-medium text-white">Retr0</span>
+                  </p>
+                  
+                  {/* Main Title */}
+                  <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-space-grotesk">
+                    Portfolio
+                  </h1>
+                  
+                  {/* Avatar */}
+                  <div className="flex justify-center mb-8">
+                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-600 to-pink-600 shadow-2xl flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-black/80 backdrop-blur-sm flex items-center justify-center">
+                        <Code className="w-12 h-12 text-purple-400" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
         {/* AI Chat Container */}
         <div className="w-full max-w-2xl mb-8 pointer-events-auto">
@@ -169,7 +170,7 @@ const Retr0 = ({ onBack, onAbout, onProjects, onContact }) => {
                           : 'bg-gray-800 text-gray-200'
                       }`}
                     >
-                      <p className="text-sm">{message.content}</p>
+                      <div className="text-sm whitespace-pre-line">{message.content}</div>
                     </div>
                     {message.type === 'user' && (
                       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-700 flex items-center justify-center flex-shrink-0">
