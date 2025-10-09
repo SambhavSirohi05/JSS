@@ -67,7 +67,7 @@ export const resumeData = {
       techStack: ["JavaScript", "React.js", "Solidity", "Ether.js", "TailwindCSS"],
       problemSolved: "Fake degree certificates and slow verification processes in academic and hiring ecosystems",
       impact: "Prevents credential fraud and enables instant verification of academic achievements",
-      liveLink: "https://authentifi.vercel.app",
+          liveLink: "https://authenti-fi.vercel.app/",
     },
     {
       name: "Chainlings Arena",

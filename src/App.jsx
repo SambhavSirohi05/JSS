@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Home from './pages/Home'
 import Retr0 from './pages/Retr0'
 import About from './pages/About'
@@ -12,6 +12,29 @@ import Retr0Achievements from './pages/Retr0Achievements'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
+
+  // Update document title based on current page
+  useEffect(() => {
+    const getPageTitle = (page) => {
+      switch (page) {
+        case 'retr0':
+        case 'retr0-about':
+        case 'retr0-projects':
+        case 'retr0-contact':
+        case 'retr0-achievements':
+          return 'Retr0'
+        case 'home':
+        case 'about':
+        case 'projects':
+        case 'contact':
+        case 'achievements':
+        default:
+          return 'Sambhav Sirohi'
+      }
+    }
+
+    document.title = getPageTitle(currentPage)
+  }, [currentPage])
 
   const renderPage = () => {
     switch (currentPage) {

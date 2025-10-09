@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Send, User, Code, Mail, FileText, Bot, Loader2, Trophy } from 'lucide-react'
 import Prism from '../components/Prism'
 import { sendMessageToAI } from '../services/aiService'
+import { parseLinksToJSX } from '../utils/linkParser.jsx'
 
 const Home = ({ onRetr0, onAbout, onProjects, onContact, onAchievements }) => {
   const [greeting, setGreeting] = useState('')
@@ -170,7 +171,9 @@ const Home = ({ onRetr0, onAbout, onProjects, onContact, onAchievements }) => {
                           : 'bg-gray-100 text-gray-800'
                       }`}
                     >
-                      <p className="text-sm">{message.content}</p>
+                      <div className="text-sm whitespace-pre-line">
+                        {message.type === 'ai' ? parseLinksToJSX(message.content) : message.content}
+                      </div>
                     </div>
                     {message.type === 'user' && (
                       <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center flex-shrink-0">
