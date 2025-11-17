@@ -78,6 +78,7 @@ const LandingPageUI = ({ scale = 0.3 }) => {
 }
 
 const Projects = ({ onBack }) => {
+
   // Projects data
   const projects = [
     {
@@ -89,7 +90,7 @@ const Projects = ({ onBack }) => {
       status: 'Live',
       github: 'https://github.com/SambhavSirohi05',
       demo: 'https://sambhavsirohi.vercel.app',
-      year: '2024'
+      year: '2025'
     },
     {
       title: 'AuthentiFi',
@@ -100,7 +101,7 @@ const Projects = ({ onBack }) => {
       status: 'Live',
       github: 'https://github.com/SambhavSirohi05',
       demo: 'https://authenti-fi.vercel.app/',
-      year: '2024'
+      year: '2025'
     },
     {
       title: 'Chainlings Arena',
@@ -111,7 +112,7 @@ const Projects = ({ onBack }) => {
       status: 'Live',
       github: 'https://github.com/SambhavSirohi05',
       demo: 'https://chainlings-arena.vercel.app',
-      year: '2024'
+      year: '2025'
     }
   ]
 
@@ -156,16 +157,15 @@ const Projects = ({ onBack }) => {
             </p>
           </div>
 
-
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pointer-events-auto">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+                className="relative bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 overflow-hidden"
               >
                 {/* Project Image/Icon */}
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden">
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative overflow-hidden rounded-t-2xl">
                   {project.useLandingUI ? (
                     <div className="w-full h-full flex items-center justify-center">
                       <LandingPageUI scale={0.4} />
@@ -179,6 +179,7 @@ const Projects = ({ onBack }) => {
                   ) : (
                     <div className="text-6xl">{project.image}</div>
                   )}
+                  
                   <div className="absolute top-4 left-4">
                     <div className={`px-2 py-1 rounded-full text-xs font-medium ${
                       project.status === 'Live' 
@@ -230,21 +231,6 @@ const Projects = ({ onBack }) => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16 pointer-events-auto">
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8 max-w-2xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Interested in working together?
-              </h2>
-              <p className="text-gray-600 mb-6">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-              <button className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg">
-                Get In Touch
-              </button>
-            </div>
           </div>
         </div>
       </div>

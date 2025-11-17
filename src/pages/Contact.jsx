@@ -1,96 +1,58 @@
-import React, { useState } from 'react'
-import { ArrowLeft, Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle, Clock, CheckCircle } from 'lucide-react'
+import React from 'react'
+import { ArrowLeft, Mail, Phone, MapPin, Building2, GraduationCap, Globe, Clock } from 'lucide-react'
 import Prism from '../components/Prism'
 
 const Contact = ({ onBack }) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 3000)
-  }
-
   const contactInfo = [
     {
-      icon: Mail,
-      title: 'Email',
-      value: 'sambhavsirohi05@gmail.com',
-      link: 'mailto:sambhavsirohi05@gmail.com',
-      color: 'from-blue-400 to-blue-600'
+      icon: Building2,
+      title: 'Department',
+      details: ['Department of Information Technology', 'JSS Academy of Technical Education'],
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Delhi, India',
-      link: '#',
-      color: 'from-green-400 to-green-600'
+      details: ['Sector 62, Noida', 'Uttar Pradesh, India'],
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Github,
-      title: 'GitHub',
-      value: 'github.com/SambhavSirohi05',
-      link: 'https://github.com/SambhavSirohi05',
-      color: 'from-purple-400 to-purple-600'
+      icon: Mail,
+      title: 'Email',
+      details: ['hodit@jssaten.ac.in', 'For general inquiries'],
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Phone,
+      title: 'Phone',
+      details: ['+91-7078221008', 'HOD Office'],
+      color: 'from-orange-500 to-red-500'
     }
   ]
 
-  const socialLinks = [
-    {
-      icon: Github,
-      name: 'GitHub',
-      url: 'https://github.com/SambhavSirohi05',
-      color: 'hover:text-gray-900'
-    },
-    {
-      icon: Linkedin,
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/sambhav-sirohi-49330516b/',
-      color: 'hover:text-blue-600'
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      url: 'https://x.com/Retr06421',
-      color: 'hover:text-blue-400'
-    }
+  const officeHours = [
+    { day: 'Monday - Friday', time: '9:00 AM - 5:00 PM' },
+    { day: 'Saturday', time: '9:00 AM - 1:00 PM' },
+    { day: 'Sunday', time: 'Closed' }
   ]
 
-  const availability = [
-    { day: 'Monday - Friday', time: '9:00 AM - 6:00 PM IST' },
-    { day: 'Saturday', time: '10:00 AM - 2:00 PM IST' },
-    { day: 'Sunday', time: 'Available for urgent queries' }
+  const quickLinks = [
+    {
+      title: 'Visit Our Website',
+      url: 'https://jssaten.ac.in',
+      icon: Globe,
+      description: 'Learn more about JSS Academy'
+    },
+    {
+      title: 'Faculty Directory',
+      description: 'Browse our expert faculty members',
+      icon: GraduationCap
+    }
   ]
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-white">
-      {/* Prism Background Animation */}
+      {/* Prism Background */}
       <div className="absolute inset-0 z-0">
         <Prism
           animationType="hover"
@@ -104,222 +66,147 @@ const Contact = ({ onBack }) => {
           glow={1.8}
         />
       </div>
-      
-      {/* Floating Back Button */}
-      <div className="fixed top-6 left-6 z-50">
-        <button 
+
+      {/* Content */}
+      <div className="relative z-10 min-h-screen px-4 py-8">
+        {/* Back Button */}
+        <button
           onClick={onBack}
-          className="group flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl"
+          className="fixed top-6 left-6 flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-gray-200 shadow-lg hover:bg-white transition-all duration-300 hover:shadow-xl z-50"
         >
-          <ArrowLeft className="w-4 h-4 text-gray-700 group-hover:text-gray-900" />
-          <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">Back</span>
+          <ArrowLeft className="w-4 h-4 text-gray-700" />
+          <span className="text-sm font-medium text-gray-700">Back</span>
         </button>
-      </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 min-h-screen px-4 py-12 pointer-events-none">
-        <div className="max-w-6xl mx-auto">
-          {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-space-grotesk">
-              Contact
-            </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Let's connect! I'm always interested in new opportunities and exciting projects.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 pointer-events-auto">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              {/* Contact Details */}
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h2>
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <a
-                      key={index}
-                      href={info.link}
-                      className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors group"
-                    >
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${info.color} shadow-md group-hover:shadow-lg transition-all duration-300`}>
-                        <info.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900">{info.title}</h3>
-                        <p className="text-gray-600">{info.value}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Follow Me</h2>
-                <div className="flex gap-4">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-4 bg-gray-100 rounded-xl hover:bg-gray-200 transition-all duration-300 ${social.color} group`}
-                    >
-                      <social.icon className="w-6 h-6" />
-                      <span className="sr-only">{social.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Availability */}
-              <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-blue-500" />
-                  Availability
-                </h2>
-                <div className="space-y-3">
-                  {availability.map((slot, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
-                      <span className="font-medium text-gray-900">{slot.day}</span>
-                      <span className="text-gray-600">{slot.time}</span>
-                    </div>
-                  ))}
-                </div>
+        {/* Header */}
+        <div className="max-w-6xl mx-auto mt-20 mb-12 text-center">
+          <div className="flex justify-center mb-6">
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 shadow-2xl flex items-center justify-center">
+              <div className="w-20 h-20 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                <Mail className="w-12 h-12 text-blue-600" />
               </div>
             </div>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+            Get in Touch
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Have questions about our department, programs, or faculty? We're here to help.
+          </p>
+        </div>
 
-            {/* Contact Form */}
-            <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <MessageCircle className="w-6 h-6 text-blue-500" />
-                Send Message
-              </h2>
-              
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                  <p className="text-gray-600">Thank you for reaching out. I'll get back to you soon.</p>
+        {/* Contact Information Grid */}
+        <div className="max-w-6xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {contactInfo.map((info, index) => {
+            const IconComponent = info.icon
+            return (
+              <div key={index} className="bg-white/90 backdrop-blur-md rounded-xl border border-gray-200 shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                <div className={`w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center shadow-md`}>
+                  <IconComponent className="w-7 h-7 text-white" />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                      placeholder="What's this about?"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
-                      placeholder="Tell me about your project or just say hello!"
-                    />
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        Send Message
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{info.title}</h3>
+                {info.details.map((detail, idx) => (
+                  <p key={idx} className={`text-gray-700 ${idx === 0 ? 'font-medium' : 'text-sm'}`}>
+                    {detail}
+                  </p>
+                ))}
+              </div>
+            )
+          })}
+        </div>
+
+        {/* Office Hours */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg p-8">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <Clock className="w-8 h-8 text-blue-600" />
+              <h2 className="text-3xl font-bold text-gray-900">Office Hours</h2>
+            </div>
+            <div className="max-w-md mx-auto space-y-4">
+              {officeHours.map((schedule, index) => (
+                <div key={index} className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+                  <span className="font-semibold text-gray-900">{schedule.day}</span>
+                  <span className="text-gray-700">{schedule.time}</span>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Call to Action */}
-          <div className="mt-16 pointer-events-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-8 text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                Ready to Start Your Project?
+        {/* Quick Links */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Links</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {quickLinks.map((link, index) => {
+              const IconComponent = link.icon
+              return (
+                <div key={index} className="bg-white/90 backdrop-blur-md rounded-xl border border-gray-200 shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-md flex-shrink-0">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2">{link.title}</h3>
+                      <p className="text-gray-700 text-sm">{link.description}</p>
+                      {link.url && (
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block mt-3 text-blue-600 hover:text-blue-700 text-sm font-medium"
+                        >
+                          Visit Website →
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="bg-white/90 backdrop-blur-md rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+            <div className="p-6 border-b border-gray-200">
+              <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3">
+                <MapPin className="w-6 h-6 text-blue-600" />
+                Find Us
               </h2>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                I'm always excited to work on new projects and collaborate with amazing people. 
-                Whether you have a specific project in mind or just want to chat about technology, 
-                I'd love to hear from you!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+            <div className="aspect-video bg-gray-100 flex items-center justify-center">
+              <div className="text-center p-8">
+                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <p className="text-gray-600 mb-2 font-medium">JSS Academy of Technical Education</p>
+                <p className="text-gray-500 text-sm">Sector 62, Noida, Uttar Pradesh</p>
                 <a
-                  href="mailto:sambhavsirohi05@gmail.com"
-                  className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
-                >
-                  Send Email
-                </a>
-                <a
-                  href="https://github.com/sambhavsirohi"
+                  href="https://maps.google.com/?q=JSS+Academy+of+Technical+Education+Noida"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
+                  className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
                 >
-                  View GitHub
+                  Open in Maps
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Faculty Contact Info */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 md:p-12 text-white text-center">
+            <GraduationCap className="w-16 h-16 mx-auto mb-4" />
+            <h2 className="text-3xl font-bold mb-4">Contact Our Faculty</h2>
+            <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
+              Each faculty member can be reached directly via their email addresses listed in their profiles.
+            </p>
+            <p className="text-white/90 mb-2">
+              <strong>Head of Department:</strong> Dr. Lavkush Sharma
+            </p>
+            <p className="text-white/90">
+              <strong>Email:</strong> hodit@jssaten.ac.in
+            </p>
           </div>
         </div>
       </div>

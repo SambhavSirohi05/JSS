@@ -1,59 +1,48 @@
-# AI Portfolio
+# JSS Academy IT Department
 
-A modern, minimalist AI Portfolio home page built with React and TailwindCSS.
+Department website for Information Technology at JSS Academy of Technical Education, Noida.
 
 ## Features
 
-- ✨ Animated gradient background with soft pastel tones
-- 🌅 Time-based greeting (Good morning/afternoon/evening)
-- 💬 Glassmorphism-style AI chat input
-- 🎯 Interactive category buttons with hover effects
-- 📄 Floating CV download button
-- 📱 Fully responsive design
-- 🎨 Clean, modern UI with Inter and Space Grotesk fonts
+- Faculty directory with detailed profiles
+- AI-powered chatbot for department queries
+- Research publications and patents showcase
+- Responsive design with modern UI
+- Search and filter functionality
+- Interactive faculty cards
 
-## Getting Started
+## Setup
 
-1. Install dependencies:
+Install dependencies:
 ```bash
 npm install
 ```
 
-2. Start the development server:
+Run development server:
 ```bash
 npm run dev
 ```
 
-3. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Visit http://localhost:5173
 
 ## Tech Stack
 
-- **React** - JavaScript library for building user interfaces
-- **TailwindCSS** - Utility-first CSS framework
-- **Lucide React** - Beautiful & consistent icon toolkit
-- **Vite** - Fast build tool and development server
+- React + Vite
+- TailwindCSS
+- Lucide Icons
+- Groq API (AI Chat)
 
-## Project Structure
+## Structure
 
 ```
 src/
-├── pages/
-│   └── Home.jsx          # Main portfolio page component
-├── App.jsx               # Root component
-├── main.jsx             # Application entry point
-└── index.css            # Global styles and Tailwind imports
+├── components/      # Reusable UI components
+├── pages/          # Page components
+├── data/           # Faculty data
+├── services/       # API services
+└── constants/      # Theme configuration
 ```
 
-## Customization
+## Faculty
 
-- Update the name in the greeting by modifying the `greeting` state in `Home.jsx`
-- Replace the avatar placeholder with your own image
-- Customize colors by modifying the gradient classes in the component
-- Add your own category buttons or modify existing ones
-
-## Future Enhancements
-
-- Backend integration for AI chat functionality
-- Dynamic content loading
-- User authentication
-- Database integration for portfolio data
+The department currently has 9 faculty members across various specializations including Machine Learning, AI, Blockchain, Cloud Computing, and Cybersecurity.

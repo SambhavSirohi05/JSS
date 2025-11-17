@@ -1,13 +1,13 @@
 // Utility function to convert URLs in text to clickable links
-export const parseLinks = (text, isDark = false) => {
+export const parseLinksToJSX = (text, isDark = false) => {
   if (!text) return text;
-  
+
   // URL regex pattern that matches http/https URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g;
-  
+
   // Split text by URLs and process each part
   const parts = text.split(urlRegex);
-  
+
   return parts.map((part, index) => {
     // If this part is a URL, make it a clickable link
     if (urlRegex.test(part)) {
@@ -18,8 +18,8 @@ export const parseLinks = (text, isDark = false) => {
           target="_blank"
           rel="noopener noreferrer"
           className={`underline break-all ${
-            isDark 
-              ? 'text-purple-400 hover:text-purple-300' 
+            isDark
+              ? 'text-purple-400 hover:text-purple-300'
               : 'text-blue-600 hover:text-blue-800'
           }`}
         >
@@ -31,33 +31,3 @@ export const parseLinks = (text, isDark = false) => {
     return part;
   });
 };
-
-// Alternative function that returns JSX elements for React components
-export const parseLinksToJSX = (text, isDark = false) => {
-  if (!text) return text;
-  
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  const parts = text.split(urlRegex);
-  
-  return parts.map((part, index) => {
-    if (urlRegex.test(part)) {
-      return (
-        <a
-          key={index}
-          href={part}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`underline break-all ${
-            isDark 
-              ? 'text-purple-400 hover:text-purple-300' 
-              : 'text-blue-600 hover:text-blue-800'
-          }`}
-        >
-          {part}
-        </a>
-      );
-    }
-    return part;
-  });
-};
-
