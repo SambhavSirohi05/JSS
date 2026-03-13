@@ -1,7 +1,7 @@
 import { facultyData } from '../data/facultyData.js';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const API_KEY = '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';
-const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 
 const createSystemPrompt = () => {
   // Calculate department statistics
@@ -71,36 +71,20 @@ You are representing a prestigious technical institution. Keep responses profess
 
 export const sendMessageToAI = async (message) => {
   try {
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'llama-3.1-8b-instant',
-        messages: [
-          {
-            role: 'system',
-            content: createSystemPrompt()
-          },
-          {
-            role: 'user',
-            content: message
-          }
-        ],
-        max_tokens: 200,
-        temperature: 0.5,
-        stream: false
-      })
+    const model = genAI.getGenerativeModel({
+      model: "gemini-2.5-flash",
+      systemInstruction: createSystemPrompt(),
     });
 
-    if (!response.ok) {
-      throw new Error(`API request failed: ${response.status}`);
-    }
+    const result = await model.generateContent({
+      contents: [{ role: 'user', parts: [{ text: message }] }],
+      generationConfig: {
+        maxOutputTokens: 200,
+        temperature: 0.5,
+      }
+    });
 
-    const data = await response.json();
-    let content = data.choices[0].message.content;
+    let content = result.response.text();
 
     // Post-process to ensure proper bullet point formatting
     content = content.replace(/•\s*/g, '\n• ');
